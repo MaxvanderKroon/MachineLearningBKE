@@ -2,7 +2,7 @@ import random
 from bke import *
 
 
-class MyRandomAgent(EvaluationAgent):
+class Anakinisyourfather3000(EvaluationAgent):
     def evaluate(self, board, my_symbol, opponent_symbol):
         return random.randint(1, 500)
 
@@ -15,5 +15,5 @@ class TTTSlayer800(EvaluationAgent):
             
             
 ttt_slayer_800 = TTTSlayer800()
-my_random_agent = MyRandomAgent()
-start(player_o=my_random_agent, player_x=ttt_slayer_800)
+anakin_is_your_father3000 = Anakinisyourfather3000()
+start(player_o=anakin_is_your_father3000, player_x=ttt_slayer_800)
