@@ -1,4 +1,5 @@
-from bke import MLAgent, is_winner, opponent, train, load, start
+import random
+from bke import MLAgent, is_winner, opponent, RandomAgent, train_and_plot
  
  
 class TTTSlayer800(MLAgent):
@@ -11,10 +12,15 @@ class TTTSlayer800(MLAgent):
             reward = 0
         return reward
     
- 
-ttt_slayer800 = TTTSlayer800()
-my_agent = load('TTTSlayer800_3000')
+    
+random.seed(1)
 
-my_agent.learning = False
+ttt_slayer_800 = TTTSlayer800()
+pizza_no_pineapple = RandomAgent()
 
-start(player_x=ttt_slayer800)
+train_and_plot(
+    agent=ttt_slayer_800,
+    validation_agent=pizza_no_pineapple,
+    iterations=50,
+    trainings=100,
+    validations=1000)
