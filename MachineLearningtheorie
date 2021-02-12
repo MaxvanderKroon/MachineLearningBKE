@@ -1,6 +1,0 @@
-from bke import MLAgent
-
-
-class MyAgent(MLAgent):
-    def evaluate(self, board):
-        return 0

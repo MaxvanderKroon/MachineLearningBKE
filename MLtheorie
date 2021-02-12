@@ -1,0 +1,16 @@
+from bke import MLAgent, is_winner, opponent, start
+ 
+ 
+class TTTSlayer800(MLAgent):
+    def evaluate(self, board):
+        if is_winner(board, self.symbol):
+            reward = 1
+        elif is_winner(board, opponent[self.symbol]):
+            reward = -1
+        else:
+            reward = 0
+        return reward
+    
+ 
+ttt_slayer800 = TTTSlayer800()
+start(player_x=ttt_slayer800)
