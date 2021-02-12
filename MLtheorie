@@ -1,5 +1,5 @@
 import random
-from bke import MLAgent, is_winner, opponent, RandomAgent, train_and_plot
+from bke import *
  
  
 class TTTSlayer800(MLAgent):
@@ -17,6 +17,7 @@ random.seed(1)
 
 ttt_slayer_800 = TTTSlayer800()
 pizza_no_pineapple = RandomAgent()
+ttt_slayer_800 = TTTSlayer800(alpha=0.5, epsilon=0.07)
 
 train_and_plot(
     agent=ttt_slayer_800,
@@ -24,3 +25,7 @@ train_and_plot(
     iterations=50,
     trainings=100,
     validations=1000)
+
+validation_result = validate(agent_x=ttt_slayer_800, agent_o=pizza_no_pineapple, iterations=50)
+
+plot_validation(validation_result)
