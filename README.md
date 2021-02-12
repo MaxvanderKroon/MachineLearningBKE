@@ -1,2 +1,2 @@
-# TTTSlayer800
-This is a repo for a piece of code (TTTSlayer800) that can defeat another piece of code (Anakinisyourfather) in a classic game of Tic Tac Toe.
+# MachineLearningBKE
+This is a repo for a school project of 2 assignments, one being the "speltheorie" from Fundament online, and the other one being the "Machine Learning" from Fundament online.
