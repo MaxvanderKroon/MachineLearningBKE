@@ -1,4 +1,4 @@
-from bke import MLAgent, is_winner, opponent, start
+from bke import MLAgent, is_winner, opponent, train, load, start
  
  
 class TTTSlayer800(MLAgent):
@@ -13,4 +13,8 @@ class TTTSlayer800(MLAgent):
     
  
 ttt_slayer800 = TTTSlayer800()
+my_agent = load('TTTSlayer800_3000')
+
+my_agent.learning = False
+
 start(player_x=ttt_slayer800)
